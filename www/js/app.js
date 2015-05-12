@@ -27,9 +27,9 @@ var posOption = {timeout: 10000,enableHighAccuracy: true};
 $cordovaGeolocation
     .getCurrentPosition(posOption)
     .then(function (position)  {
-      $scope.geo = position;
-    //  $scope.lat = position.coords.latitude;
-    //  $scope.long = position.coords.longitude;
+      
+     $scope.lat = position.coords.latitude;
+     $scope.long = position.coords.longitude;
 
 
     }, function(err){
