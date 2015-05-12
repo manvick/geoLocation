@@ -23,6 +23,8 @@ ionicApp.run(function($ionicPlatform, $cordovaGeolocation) {
 
 ionicApp.controller('myCtrl', function($scope, $cordovaGeolocation){
 
+$scope.toggle = function(){
+
 var posOption = {timeout: 10000,enableHighAccuracy: true};
 $cordovaGeolocation
     .getCurrentPosition(posOption)
@@ -37,6 +39,10 @@ $cordovaGeolocation
     }
 
       );
+  
+}
+
+
 
 });
 
